@@ -1,0 +1,7 @@
+.contenedor ::after{
+    content: 'Pasar por aqui';
+}
+.boton:hover{
+    color: white;
+    background-color: green;
+}
