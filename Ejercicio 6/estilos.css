@@ -1,7 +1,21 @@
-.contenedor ::after{
-    content: 'Pasar por aqui';
+body{
+    min-height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 .boton:hover{
     color: white;
     background-color: green;
+    
 }
+.boton::before{
+    content: 'Pasar por aqui';
+}
+
+.boton:hover::before{
+    content: 'Hecho!';
+}
+
