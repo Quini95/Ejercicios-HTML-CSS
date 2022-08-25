@@ -13,13 +13,13 @@ body{
     padding: 10px 30px;
     background-color: coral;
     color: white;
-    transition: 0.4s;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
 .btn-modern:hover{
     background-color: rgb(249, 91, 33);
-    border-top: 2px solid gray;
+    box-shadow: 0 5px 10px rgba(45, 206, 255, 0.5);
     transform: translateY(-5px);
     color:black;
     font-weight: bold;
