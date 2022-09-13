@@ -1,0 +1,205 @@
+@use "components";
+@mixin section-display {
+    width: 100%;
+    max-width: 992px;
+    padding: 3rem;
+    margin: auto;
+    
+}
+body{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5rem;
+}
+.nav{
+    display: flex;
+    border-bottom: solid 1px #ddd;
+    justify-content: space-around;
+    width: 100%;
+    height: 4rem;
+    align-items: center;
+}
+.logo img{
+    width: 6rem;
+    height: auto;
+}
+.sec-home{
+    display: flex;
+    @include section-display();
+    align-items: center;
+    .home-cta{
+        flex: 1;
+        .cta-text{
+            
+            span, i{
+                font-weight: 600;
+                color: components.$color-main;
+            }
+            .home-tittle{
+                width: 20rem;
+                font-size: 3rem;
+            }
+            .home-description{
+                max-width: 300px;
+            }
+            .lead-magnet{
+                .input{
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
+.home-img{
+    img{
+        height: 40rem;
+    }
+    
+}
+.sec-features{
+    @include section-display();
+    .intro{
+        text-align: center;
+        h3{
+            font-size: 1.8rem;
+        }
+        p{
+            font-size: 0.8rem;
+            color: #888;
+        }
+    }
+    .features{
+        display: flex;
+        align-items: center;
+        .text{
+            padding: 2rem 0;
+            max-width: 100vw;
+            .text-feature{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1.2rem;
+                .description{
+                    .description-tittle{
+                        font-size: 1.15rem;
+                        font-weight: 600;
+                    }
+                    .description-text{
+                        font-size: 1rem;
+
+                    }
+
+                }
+            }
+
+        }
+        .image{
+            img{
+                max-width: 20rem;
+            }
+
+        }
+    }
+}
+.sec-benefits{
+    border-top: 1px solid #ccc;
+    .intro { 
+        @extend .sec-features, .intro;
+        text-align: center;
+    }
+    .benefits-cards{
+        width: 100%;
+        .benefit{
+            .cta{
+                margin-top: 1rem;
+                padding-bottom: 5rem;
+            }
+        }
+    }
+    
+}
+.sec-kpis{
+    background-color: components.$color-main;
+    color: white;
+    padding: 4rem;
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+        .kpis{
+            flex-direction: display;
+            flex-direction: column;
+            align-items: center;
+            
+            .number{
+                font-size: 3.5rem;
+                font-weight: 600;
+
+            }
+        }
+    
+    
+}
+.sec-onboarding{
+    .intro { 
+        @extend .sec-features, .intro;
+        text-align: center;
+    }   
+    .steps{
+        padding: 0 7rem;
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        justify-content: center;
+        .step-separator{
+            flex: 1;
+            border-top: 2px solid #ddd;
+            margin: 0 1rem;
+        }
+    }
+}
+.sec-footer-cta{
+    margin-top: 2rem;
+    background-color: #f4f8fe;
+    padding: 5rem;
+    background-image: url(https://assets.coinbase.com/assets/earn-upsell-desktop.969a983ce74a462a68ba618b798a8cfa.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+    align-items: center;
+    
+    .footer-cta{
+        width: 50%;
+        .cta-tittle{
+            font-size: 2rem;
+        }
+        .cta-description{
+            font-size: 1.1rem;
+        }
+
+    }
+    
+}
+
+@media (max-width: 768px){
+    .sec-home{
+        text-align: center;
+        max-width: 100%; 
+    }
+    .sec-onboarding{
+        .steps{
+            flex-direction: column;
+            .icon-desc{
+                .tittle{
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+    .sec-footer-cta{
+        display: flex;
+        background-image: none;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
